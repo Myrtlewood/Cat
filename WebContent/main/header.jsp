@@ -7,8 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-        <nav class="navbar navbar-light sticky-top bg-light">
-            <div class="nav ">
+<!-- 헤더 -->
+		<nav class="navbar navbar-light sticky-top bg-light">
+            <div class="nav">
             	<div class="icon1">
 		        	<a class="navbar-brand" href="mainPage.jsp"><i class="fas fa-cat fa-lg"></i> 메인화면</a>
 		       		<a class="navbar-brand" href="subPage.jsp"><i class="fas fa-external-link-alt fa-lg"></i> 서브화면</a>
@@ -21,9 +22,9 @@
             	</div>
             	<div class="nav-item">
                     <button type="button" class="btn btn-primary btn-md btn-success"data-toggle="modal" data-target="#exampleModal">새 글 등록하기</button>
-            	</div>
+				</div>
                 
-            </div>
-        </nav>
+			</div>
+		</nav>
 </body>
 </html>
