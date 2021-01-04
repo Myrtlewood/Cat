@@ -6,29 +6,33 @@
 <title>My Instagram Cat</title>
 </head>
 	<body>
-        <div class="navbar navbar-expand-lg navbar-light bg-light">
+	<!-- Header -->
+        <div class="navbar navbar-light bg-light">
         
-            	<div class="icon1">
-		        	<a class="navbar-brand" href="mainPage.jsp"><i class="fas fa-cat fa-2x"></i>
-		        	메인화면
-		        	</a>
-		
-		       		<a class="navbar-brand" href="subPage.jsp"><i class="fas fa-external-link-alt fa-2x"></i> 서브화면</a>
+            	<div class="col-sm-3">
+		        	<a class="navbar-brand" href="mainPage.jsp"><i class="fas fa-cat fa-2x"></i> MainCat</a>
+		       		<a class="navbar-brand" href="subPage.jsp"><i class="fas fa-external-link-alt fa-2x"></i> DataCat</a>
+		       	</div>
+            	<div class="col-sm-6">
+		       		<div class="search_box">
+		                <input type="text" placeholder="검색" id="search-field">
+		                <div class="fake_field">
+		                    <i class="fas fa-search fa-2x"></i>
+						</div>
+            		</div>
 				</div>
-				<div class="icon2">
-            		<a class="navbar-brand" href="#" data-toggle="modal" data-target="#myModal2"><i class="fas fa-user-circle fa-lg"></i></a>
-		       		<a class="navbar-brand" href="#"><i class="fas fa-user-cog"></i></a>
-		       		<a class="navbar-brand" href="#"><i class="fas fa-heart"></i></a>
-		       		<a class="navbar-brand" href="#"><i class="fas fa-paper-plane"></i></a>
+				<div class="col-sm-3">
+            		<a class="navbar-brand" href="#" data-toggle="modal" data-target="#myModal2"><i class="fas fa-user-circle fa-2x"></i></a>
+		       		<a class="navbar-brand" href="#"><i class="fas fa-user-cog fa-2x"></i></a>
+		       		<a class="navbar-brand" href="#"><i class="fas fa-heart fa-2x"></i></a>
+		       		<a class="navbar-brand" href="#"><i class="fas fa-paper-plane fa-2x"></i></a>
+                    <button type="button" class="btn btn-primary btn-md btn-success"data-toggle="modal" data-target="#posting_modal">새 글 등록하기</button>
             	</div>
-            	<div class="nav-item justify-content-right">
-                    <button type="button" class="btn btn-primary btn-md btn-success"data-toggle="modal" data-target="#exampleModal">새 글 등록하기</button>
-            	</div>
-        </div>	
+        	</div>	
         
         
         <!-- Modal Begin -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="posting_modal" tabindex="-1" role="dialog" aria-labelledby="posting_modalLabel" aria-hidden="true">
           <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
               <div class="modal-body">
@@ -46,7 +50,7 @@
         </div> 
         <!-- modal end -->
         <!-- Modal Begin -->
-        <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="posting_modalLabel" aria-hidden="true">
           <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
               <div class="modal-body">
@@ -132,7 +136,7 @@
         </div> 
         <!-- modal end -->
         <!-- Modal Begin -->
-	  <div class="modal fade" id="myModal2" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal fade" id="myModal2" role="dialog" aria-labelledby="posting_modalLabel" aria-hidden="true">
 	    <div class="modal-dialog">
 	        <div class="modal-content">
 	        <div class="modal-header" style="padding:35px 50px;">
