@@ -112,6 +112,105 @@
 .detail .about > span.on:after{
     width:75%;
 }
+.followFriend{
+    width: 293px;
+    /*height: 300px;*/
+    /*background: rgba(255, 0, 0, 0.16);*/
+/*     position:absolute; */
+/*     right: 0; */
+/*     top: 0; */
+
+}
+.modal{
+width:320px;
+}
+
+.followFriend.on{
+    position: fixed;
+    top: 80px;
+}
+.followFriend .profile_thumb{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow:hidden;
+    margin-right: 10px;
+}
+
+
+.followFriend .profile_thumb img{
+    width: 100%;
+    height:100%;
+}
+
+.followFriend .user_profile{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color:#262626;
+}
+.followFriend .detail .id{
+    margin-bottom: 5px;
+}
+
+.followFriend .detail .ko_name{
+    font-size: 12px;
+    color:#999;
+}
+
+
+.followFriend > article{
+    border: 1px solid rgba(0,0,0,0.09);
+    border-radius: 3px;
+    margin-bottom: 20px;
+    width: 291px;
+    font-size: 14px;
+    color:#262626;
+    font-weight: bold;
+    background: white;
+}
+
+.followFriend > article > header{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    color:#999;
+}
+
+
+.followFriend > article > header .more{
+    font-size: 12px;
+    color:#262626;
+    cursor:pointer;
+}
+
+.thumb_user{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.thumb_user .profile_thumb{
+    width: 34px;
+    height: 34px;
+}
+
+
+.thumb_user .time{
+    font-size: 10px;
+    letter-spacing: 0.2px;
+    color:#999;
+}
+
+
+.followFriend .scroll_inner{
+    height: 182px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /*overflow:hidden auto;*/
+
+}
 @media screen and (max-width:1000px){
     .photoList {
         justify-content: center;
@@ -120,7 +219,11 @@
 }
 
 </style>
-
+<script type="text/javascript">
+function followList(){
+	$("#followModal").modal('show');
+}
+</script>
 </head>
 <body>
 <%@ include file="header.jsp" %>
@@ -159,7 +262,7 @@
                             3
                         </li>
                         <li>
-                            <span>팔로워</span>
+                            <span><a href="javascript:followList()">팔로워</a></span>                       
                             3
                         </li>
                     </ul>
@@ -199,5 +302,72 @@
                 </div>
                 </div>
             </div>
+            
+            
+              <div class="modal fade" id="followModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+    <div class="modal-header">
+       팔로우목록  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+     
+      </div>
+      <div class="modal-body">
+        <div class="followFriend">
+    		<article class="story">
+                    <div class="scroll_inner">
+                        <div class="thumb_user">
+                            <div class="profile_thumb">
+                                <img src="./img/1.jpg" alt="프로필사진">
+                            </div>
+                            <div class="detail">
+                                <div class="id">고양이1</div>
+                                <div class="time">1시간 전</div>
+                            </div>
+                        </div>
+                        <div class="thumb_user">
+                            <div class="profile_thumb">
+                                <img src="./img/1.jpg" alt="프로필사진">
+                            </div>
+                            <div class="detail">
+                                <div class="id">고양이2</div>
+                                <div class="time">1시간 전</div>
+                            </div>
+                        </div>
+                        <div class="thumb_user">
+                            <div class="profile_thumb">
+                                <img src="./img/1.jpg" alt="프로필사진">
+                            </div>
+                            <div class="detail">
+                                <div class="id">고양이3</div>
+                                <div class="time">1시간 전</div>
+                            </div>
+                        </div>
+                        <div class="thumb_user">
+                            <div class="profile_thumb">
+                                <img src="./img/1.jpg" alt="프로필사진">
+                            </div>
+                            <div class="detail">
+                                <div class="id">고양이4</div>
+                                <div class="time">1시간 전</div>
+                            </div>
+                        </div>
+                        <div class="thumb_user">
+                            <div class="profile_thumb">
+                                <img src="./img/1.jpg" alt="프로필사진">
+                            </div>
+                            <div class="detail">
+                                <div class="id">고양이5</div>
+                                <div class="time">1시간 전</div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+      </div>
+    </div>
+  </div>
+</div>
+            
+            
 </body>
 </html>
